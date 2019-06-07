@@ -1,7 +1,7 @@
 <template>
   <div class="sound">
     <audio controls :id="index" @play="isPlaying = true" @pause="isPlaying = false">
-      <source :src="require(`../../assets/sounds/${sound.src}`)" />
+      <source :src="`/sounds/${sound.src}`" />
     </audio>
     <button @click="toggle(index)">
       {{ sound.label }}

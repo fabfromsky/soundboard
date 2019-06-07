@@ -6,13 +6,8 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   provide: {
-    staticResources: {
-      sounds: {
-        url: '/assets/sounds/'
-      },
-      imgs: {
-        url: 'assets/imgs/'
-      }
+    public: {
+      url: '/public/'
     }
   }
 }).$mount('#app')
