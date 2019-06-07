@@ -1,8 +1,5 @@
 <template>
   <div class="sound">
-    <audio controls :id="index" @play="isPlaying = true" @pause="isPlaying = false">
-      <source :src="`/sounds/${sound.src}`" />
-    </audio>
     <button @click="toggle(index)">
       {{ sound.label }}
     </button>
@@ -11,6 +8,14 @@
       @click="toggle(index)">
       <div :class="{ 'is-playing': isPlaying }" />
     </div>
+    <audio
+      controls
+      :id="index"
+      @play="isPlaying = true"
+      @pause="isPlaying = false"
+      :class="{'is-playing': isPlaying}">
+      <source :src="`/sounds/${sound.src}`" />
+    </audio>
   </div>
 </template>
 
@@ -51,10 +56,11 @@ export default {
 .sound {
   display: inline-block;
   vertical-align: middle;
-  margin: 20px 20px;
+  margin: 30px 20px;
+  position: relative;
 }
 button {
-  color: white;
+  color: #0e1e24;
   font-weight: bold;
   text-transform: capitalize;
   height: 60px;
@@ -62,40 +68,52 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  background: #555;
+  background: white;
   border: none;
   padding-left: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .stop {
   width: 60px;
   height: 60px;
-  background: #555;
+  background: white;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
   padding: 20px;
+  border-left: 1px solid #0e1e24;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   > div {
     width: 0;
     height: 0;
-    border-left: 10px solid white;
+    border-left: 10px solid#0e1e24;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     display: block;
     transition: all 0.5s;
 
     &.is-playing {
-      border-bottom: 10px solid white;
-      border-top: 10px solid white;
-      border-right: 10px solid white;
+      border-bottom: 10px solid#0e1e24;
+      border-top: 10px solid#0e1e24;
+      border-right: 10px solid#0e1e24;
       transition: all 0.5s;
     }
   }
 }
 
 audio {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+  &.is-playing {
+    visibility: visible;
+  }
 }
 </style>
 
