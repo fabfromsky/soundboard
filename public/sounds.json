@@ -1,0 +1,54 @@
+[
+  {
+    "label": "wow",
+    "src":"wow.mp3"
+  },
+  {
+    "label": "ah",
+    "src":"ah.mp3"
+  }, 
+  {
+    "label": "il est content gaetan",
+    "src":"il-est-content-gaetan.mp3"
+  }, 
+  {
+    "label": "tout le monde sen fout",
+    "src":"jurassic-park-tout-le-monde-sen-fout.mp3"
+  }, 
+  {
+    "label": "ah tes pede",
+    "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3"
+  }, 
+  {
+    "label": "comment y tas defonce",
+    "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3"
+  }, 
+  {
+    "label": "noot noot",
+    "src":"noot-noot.mp3"
+  }, 
+  {
+    "label": "pas besoin de protection dans la vie",
+    "src":"omar-ef-fred-protection.mp3"
+  },
+  {
+    "label": "mais c'est de la merde",
+    "src": "mais c'est de la merde.mp3"
+  },
+  {
+    "label": "bon travail",
+    "src": "bon-travail.mp3"
+  },
+  {
+    "label": "c'est nul",
+    "src": "cest-nul.mp3"
+  },
+  {
+    "label": "knacki",
+    "src": "mais-tavais-dit-quon-ferait-des-knacki.mp3"
+  },
+  {
+    "label": "Maurice",
+    "src": "tu-pousses-le-bouchon-un-peu-trop-loin-maurice.mp3"
+  } 
+]
