@@ -11,6 +11,7 @@
 <script>
 import { get as _get } from 'lodash'
 import bouton from '../components/bouton'
+import { orderBy as _orderBy } from 'lodash'
 export default {
   name: 'Board',
   components: {bouton},
@@ -24,7 +25,7 @@ export default {
     fetch('../sounds.json')
       .then(function(res) {
         return res.json().then(function(data) {
-          this.sounds = data
+          this.sounds = _orderBy(data, 'label')
         }.bind(this))
       }.bind(this))
   }

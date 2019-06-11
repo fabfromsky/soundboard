@@ -48,11 +48,39 @@
     "src": "mais-tavais-dit-quon-ferait-des-knacki.mp3"
   },
   {
-    "label": "Pas de palais",
+    "label": "pas de palais",
     "src": "pas-de-palais-pas-de-palais.mp3"
   },
   {
-    "label": "Maurice",
+    "label": "maurice",
     "src": "tu-pousses-le-bouchon-un-peu-trop-loin-maurice.mp3"
+  },
+  {
+    "label": "encore du travail",
+    "src": "warcraft-3-humain-travail.mp3"
+  },
+  {
+    "label": "travail terminé",
+    "src": "travail-termine.mp3"
+  },
+  {
+    "label": "cool cool cool",
+    "src": "cool-cool-cool-cool-cool.mp3"
+  },
+  {
+    "label": "cool cool cool 2",
+    "src": "cool-cool-cool-cool-cool-2.mp3"
+  },
+  {
+    "label": "cool cool cool 3",
+    "src": "cool-cool-cool-cool-cool-3.mp3"
+  },
+  {
+    "label": "cool cool cool 4",
+    "src": "cool-cool-cool-cool-cool-4.mp3"
+  },
+  {
+    "label": "cool cool cool 5",
+    "src": "cool-cool-cool-cool-cool-5.mp3"
   } 
 ]

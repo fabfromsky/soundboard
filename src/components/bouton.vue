@@ -110,6 +110,7 @@ audio {
   position: absolute;
   top: 60px;
   left: 0;
+  width: 100%;
 
   &.is-playing {
     visibility: visible;
