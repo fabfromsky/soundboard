@@ -1,8 +1,8 @@
 <template>
 <div>
   <div class="search-tools">
-    <input type="text" v-model="search"  placeholder="rechercher" />
-    <select v-model="selectedCategory" >
+    <input type="text" v-model="search" placeholder="rechercher" />
+    <select v-model="selectedCategory">
       <option value='null'>
         tous
       </option>
@@ -59,12 +59,12 @@ export default {
     },
     showSoundOnSelect (sound) {
       if ((this.search !== null && this.search !== '')) {
-        return this.inputIntoSelect(sound)
+        return this.inputIntoSelectOrNot(sound)
       } else if ((this.selectedCategory === 'null' || this.selectedCategory === null)) {
         return true
       } else return _includes(sound.categories, this.selectedCategory)
     },
-    inputIntoSelect (sound) {
+    inputIntoSelectOrNot (sound) {
       if (this.selectedCategory !== 'null' && this.selectedCategory !== null) {
         return (_includes(sound.categories, this.selectedCategory) && (sound.label.includes(this.search.toLowerCase()) || sound.src.includes(this.search.toLowerCase())))
       } else {
