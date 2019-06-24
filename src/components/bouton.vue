@@ -58,7 +58,15 @@ export default {
   vertical-align: middle;
   margin: 30px 20px;
   position: relative;
+  border-radius: 5px;
+  border: 2px solid white;
+
+  &:hover, &:focus {
+    border-color: #0e1e24;
+    cursor: pointer;
+  }
 }
+
 button {
   color: #0e1e24;
   font-weight: bold;
@@ -71,8 +79,11 @@ button {
   background: white;
   border: none;
   padding-left: 20px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+
+  &:focus {
+    outline: none;
+  }
+
 }
 
 .stop {
@@ -84,8 +95,6 @@ button {
   box-sizing: border-box;
   padding: 20px;
   border-left: 1px solid #0e1e24;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 
   > div {
     width: 0;
