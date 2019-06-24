@@ -1,8 +1,8 @@
 <template>
 <div>
-  <div class="search-tools" v-on:change="filter">
-    <input type="text" v-model="search" placeholder="rechercher" />
-    <select v-model="selectedCategory">
+  <div class="search-tools">
+    <input type="text" v-model="search"  placeholder="rechercher" />
+    <select v-model="selectedCategory" >
       <option value='null'>
         tous
       </option>
@@ -16,10 +16,11 @@
   </div>
   <div class="grid">
     <bouton
-      v-for="(sound, i) in filteredSounds"
-      :key="i"
+      v-for="(sound, j) in allSounds"
+      v-show="showSoundOnSelect(sound)"
+      :key="j"
       :sound="sound"
-      :index="i"/>
+      :index="j"/>
   </div>
 </div>
 </template>
@@ -34,8 +35,6 @@ export default {
   data () {
     return {
       allSounds: [],
-      filteredSounds: [],
-      isPlaying: false,
       categories: [],
       selectedCategory: null,
       search: null
@@ -45,7 +44,7 @@ export default {
     fetch('../sounds.json')
       .then(function (res) {
         res.json().then(function (data) {
-          this.filteredSounds = this.allSounds = _orderBy(data, 'label')
+          this.allSounds = _orderBy(data, 'label')
           this.categories = this.getCategories(data)
         }.bind(this))
       }.bind(this))
@@ -58,27 +57,18 @@ export default {
       })
       return _uniq(categories)
     },
-    filter (val) {
-      return _filter(this.allSounds, (sound) => {
-        let filteredCategories = []
-        sound.categories.forEach((categorie) => {
-          if (categorie.includes(val)) {
-            filteredCategories.push(categorie)
-          }
-        })
-        return sound.label.includes(val) || sound.src.includes(val) || filteredCategories.length > 0
-      })
-    }
-  },
-  watch: {
-    selectedCategory (val) {
-      this.filteredSounds = val !== 'null' ? _filter(this.allSounds, (sound) => _includes(sound.categories, this.selectedCategory)) : this.allSounds
+    showSoundOnSelect (sound) {
+      if ((this.search !== null && this.search !== '')) {
+        return this.inputIntoSelect(sound)
+      } else if ((this.selectedCategory === 'null' || this.selectedCategory === null)) {
+        return true
+      } else return _includes(sound.categories, this.selectedCategory)
     },
-    search (val) {
-      if (val !== null && val !== '') {
-        this.filteredSounds = this.filter(val)
+    inputIntoSelect (sound) {
+      if (this.selectedCategory !== 'null' && this.selectedCategory !== null) {
+        return (_includes(sound.categories, this.selectedCategory) && (sound.label.includes(this.search.toLowerCase()) || sound.src.includes(this.search.toLowerCase())))
       } else {
-        this.filteredSounds = this.allSounds
+        return sound.label.includes(this.search.toLowerCase()) || sound.src.includes(this.search.toLowerCase())
       }
     }
   }
