@@ -25,13 +25,13 @@
 </template>
 
 <script>
-import { get as _get, uniq as _uniq, concat as _concat, filter as _filter, includes as _includes } from 'lodash'
+import { get as _get, uniq as _uniq, concat as _concat, filter as _filter, includes as _includes, orderBy as _orderBy } from 'lodash'
 import bouton from '../components/bouton'
-import { orderBy as _orderBy } from 'lodash'
+
 export default {
   name: 'Board',
-  components: {bouton},
-  data() {
+  components: { bouton },
+  data () {
     return {
       allSounds: [],
       filteredSounds: [],
@@ -43,8 +43,8 @@ export default {
   },
   mounted () {
     fetch('../sounds.json')
-      .then(function(res) {
-        res.json().then(function(data) {
+      .then(function (res) {
+        res.json().then(function (data) {
           this.filteredSounds = this.allSounds = _orderBy(data, 'label')
           this.categories = this.getCategories(data)
         }.bind(this))
@@ -68,15 +68,14 @@ export default {
         })
         return sound.label.includes(val) || sound.src.includes(val) || filteredCategories.length > 0
       })
-
     }
   },
   watch: {
-    selectedCategory(val) {
+    selectedCategory (val) {
       this.filteredSounds = val !== 'null' ? _filter(this.allSounds, (sound) => _includes(sound.categories, this.selectedCategory)) : this.allSounds
     },
-    search(val) {
-      if(val !== null && val !== "") {
+    search (val) {
+      if (val !== null && val !== '') {
         this.filteredSounds = this.filter(val)
       } else {
         this.filteredSounds = this.allSounds
@@ -96,7 +95,6 @@ export default {
     text-transform: capitalize;
     height: 60px;
     width: 200px;
-    border: none;
     background: white;
     border: 2px solid white;
     padding-left: 20px;
@@ -119,7 +117,6 @@ export default {
     text-transform: capitalize;
     height: 60px;
     width: 200px;
-    border: none;
     background: white;
     border: 2px solid white;
     padding-left: 20px;
@@ -139,5 +136,3 @@ export default {
   text-align: left;
 }
 </style>
-
-

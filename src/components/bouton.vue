@@ -38,14 +38,14 @@ export default {
     }
   },
   methods: {
-    play(id) {
+    play (id) {
       document.getElementById(id).play()
     },
-    stop(id) {
+    stop (id) {
       document.getElementById(id).pause()
       document.getElementById(id).currentTime = 0
     },
-    toggle(id) {
+    toggle (id) {
       this.isPlaying ? this.stop(id) : this.play(id)
     }
   }
@@ -126,4 +126,3 @@ audio {
   }
 }
 </style>
-
