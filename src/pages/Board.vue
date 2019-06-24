@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div class="search-tools">
-    <!-- <input type="text" placeholder="rechercher" /> -->
+  <div class="search-tools" v-on:change="filter">
+    <input type="text" v-model="search" placeholder="rechercher" />
     <select v-model="selectedCategory">
       <option value='null'>
         tous
@@ -37,7 +37,8 @@ export default {
       filteredSounds: [],
       isPlaying: false,
       categories: [],
-      selectedCategory: null
+      selectedCategory: null,
+      search: null
     }
   },
   mounted () {
@@ -56,11 +57,30 @@ export default {
         categories = _concat(categories, ...datum.categories)
       })
       return _uniq(categories)
+    },
+    filter (val) {
+      return _filter(this.allSounds, (sound) => {
+        let filteredCategories = []
+        sound.categories.forEach((categorie) => {
+          if (categorie.includes(val)) {
+            filteredCategories.push(categorie)
+          }
+        })
+        return sound.label.includes(val) || sound.src.includes(val) || filteredCategories.length > 0
+      })
+
     }
   },
   watch: {
     selectedCategory(val) {
       this.filteredSounds = val !== 'null' ? _filter(this.allSounds, (sound) => _includes(sound.categories, this.selectedCategory)) : this.allSounds
+    },
+    search(val) {
+      if(val !== null && val !== "") {
+        this.filteredSounds = this.filter(val)
+      } else {
+        this.filteredSounds = this.allSounds
+      }
     }
   }
 }
@@ -68,7 +88,7 @@ export default {
 
 <style lang="scss" scoped>
 .search-tools {
-  margin-left: 20px;
+  text-align: center;
 
   select {
     color: #0e1e24;
@@ -82,12 +102,36 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
+    margin-left: 30px;
+    box-sizing: border-box;
 
     &:hover,
     &:focus {
       outline: none;
       border: 2px solid #0e1e24;
       cursor: pointer;
+    }
+  }
+
+  input {
+    color: #0e1e24;
+    font-weight: bold;
+    text-transform: capitalize;
+    height: 60px;
+    width: 200px;
+    border: none;
+    background: white;
+    border: 2px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 2px solid #0e1e24;
+      cursor: text;
     }
   }
 }
