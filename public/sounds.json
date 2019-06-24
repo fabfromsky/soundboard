@@ -1,86 +1,269 @@
 [
   {
     "label": "wow",
-    "src":"wow.mp3"
+    "src":"wow.mp3",
+    "categories": [
+      "film",
+      "onomatopée"
+    ]
   },
   {
     "label": "ah",
-    "src":"ah.mp3"
+    "src":"ah.mp3",
+    "categories": [
+      "koh lantah",
+      "onomatopée"
+    ]
   }, 
   {
     "label": "il est content gaetan",
-    "src":"il-est-content-gaetan.mp3"
+    "src":"il-est-content-gaetan.mp3",
+    "categories": [
+      "dessin animée"
+    ]
   }, 
   {
     "label": "tout le monde sen fout",
-    "src":"jurassic-park-tout-le-monde-sen-fout.mp3"
+    "src":"jurassic-park-tout-le-monde-sen-fout.mp3",
+    "categories": [
+      "film"
+    ]
   }, 
   {
     "label": "ah tes pede",
-    "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3"
+    "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3",
+    "categories": [
+      "tour montparnasse",
+      "film"
+    ]
   }, 
   {
     "label": "comment y tas defonce",
-    "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3"
+    "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
+    "categories": [
+      "tour montparnasse",
+      "film"
+    ]
   }, 
   {
     "label": "noot noot",
-    "src":"noot-noot.mp3"
+    "src":"noot-noot.mp3",
+    "categories": [
+      "dessin animée"
+    ]
   }, 
   {
     "label": "pas besoin de protection dans la vie",
-    "src":"omar-ef-fred-protection.mp3"
+    "src":"omar-ef-fred-protection.mp3",
+    "categories": [
+      "comique"
+    ]
   },
   {
     "label": "mais c'est de la merde",
-    "src": "mais c'est de la merde.mp3"
+    "src": "mais c'est de la merde.mp3",
+    "categories": [
+
+    ]
   },
   {
     "label": "bon travail",
-    "src": "bon-travail.mp3"
+    "src": "bon-travail.mp3",
+    "categories": [
+      "film"
+    ]
   },
   {
     "label": "c'est nul",
-    "src": "cest-nul.mp3"
+    "src": "cest-nul.mp3",
+    "categories": [
+      "pub"
+    ]
   },
   {
     "label": "knacki",
-    "src": "mais-tavais-dit-quon-ferait-des-knacki.mp3"
+    "src": "mais-tavais-dit-quon-ferait-des-knacki.mp3",
+    "categories": [
+      "pub"
+    ]
   },
   {
     "label": "pas de palais",
-    "src": "pas-de-palais-pas-de-palais.mp3"
+    "src": "pas-de-palais-pas-de-palais.mp3",
+    "categories": [
+      "film"
+    ]
   },
   {
     "label": "maurice",
-    "src": "tu-pousses-le-bouchon-un-peu-trop-loin-maurice.mp3"
+    "src": "tu-pousses-le-bouchon-un-peu-trop-loin-maurice.mp3",
+    "categories": [
+      "pub"
+    ]
   },
   {
     "label": "encore du travail",
-    "src": "warcraft-3-humain-travail.mp3"
+    "src": "warcraft-3-humain-travail.mp3",
+    "categories": [
+      "jeu vidéo"
+    ]
   },
   {
     "label": "travail terminé",
-    "src": "travail-termine.mp3"
+    "src": "travail-termine.mp3",
+    "categories": [
+      "jeu vidéo"
+    ]
   },
   {
     "label": "cool cool cool",
-    "src": "cool-cool-cool-cool-cool.mp3"
+    "src": "cool-cool-cool-cool-cool.mp3",
+    "categories": [
+      "série",
+      "brooklyn99"
+    ]
   },
   {
     "label": "cool cool cool 2",
-    "src": "cool-cool-cool-cool-cool-2.mp3"
+    "src": "cool-cool-cool-cool-cool-2.mp3",
+    "categories": [
+      "série",
+      "brooklyn99"
+    ]
   },
   {
     "label": "cool cool cool 3",
-    "src": "cool-cool-cool-cool-cool-3.mp3"
+    "src": "cool-cool-cool-cool-cool-3.mp3",
+    "categories": [
+      "série",
+      "brooklyn99"
+    ]
   },
   {
     "label": "cool cool cool 4",
-    "src": "cool-cool-cool-cool-cool-4.mp3"
+    "src": "cool-cool-cool-cool-cool-4.mp3",
+    "categories": [
+      "série",
+      "brooklyn99"
+    ]
   },
   {
     "label": "cool cool cool 5",
-    "src": "cool-cool-cool-cool-cool-5.mp3"
+    "src": "cool-cool-cool-cool-cool-5.mp3",
+    "categories": [
+      "série",
+      "brooklyn99"
+    ]
+  },
+  {
+    "label": "j'aime me beurrer la biscotte",
+    "src": "oss-117-jaime-me-beurrer-la-biscotte.mp3",
+    "categories": [
+      "film",
+      "oss117"
+    ]
+  },
+  {
+    "label": "ça sent le taureau ici",
+    "src": "mais-qui-a-tue-pamela-rose-ca-sent-le-taureau-ici-a-rungis.mp3",
+    "categories": [
+      "film"
+    ]
+  },
+  {
+    "label": "c'est mieux comme ça ?",
+    "src": "cest-mieux-comme-ca.mp3",
+    "categories": [
+      "film"
+    ]
+  },
+  {
+    "label": "ça fait des chocapics",
+    "src": "et-paf-ca-fait-des-chocapic.mp3",
+    "categories": [
+      "pub"
+    ]
+  },
+  {
+    "label": "oh oh oh ooh",
+    "src": "motus-boule-noire.mp3",
+    "categories": [
+      "télévision"
+    ]
+  },
+  {
+    "label": "t'as pas envie...",
+    "src": "rrrrrrr-tas-pas-envie-des-fois-de-pas-rien-faire.mp3",
+    "categories": [
+      "film",
+      "rrrrr"
+    ]
+  },
+  {
+    "label": "un sandwish",
+    "src": "rrrrrrr-celui-qui-dit-quil-la-fait-je-lui-offre-un-sandwish.mp3",
+    "categories": [
+      "film",
+      "rrrrr"
+    ]
+  },
+  {
+    "label": "elle est morte de vieillesse",
+    "src": "rrrrrrr-non-mais-je-sais.mp3",
+    "categories": [
+      "film",
+      "rrrrr"
+    ]
+  },
+  {
+    "label": "c'est peut être un végétal",
+    "src": "rrrrrrr-si-cest-pas-un-animal-quil-la-tue-cest-ptet-un-vegetal.mp3",
+    "categories": [
+      "film",
+      "rrrrr"
+    ]
+  },
+  {
+    "label": "cochon",
+    "src": "cochon.mp3",
+    "categories": [
+      "webtv"
+    ]
+  },
+  {
+    "label": "rafiki",
+    "src": "rafiki.mp3",
+    "categories": [
+      "webtv"
+    ]
+  },
+  {
+    "label": "wesh alors",
+    "src": "wesh alors.mp3",
+    "categories": [
+      "musique"
+    ]
+  },
+  {
+    "label": "je sais qui c'est",
+    "src": "oss-117-jai-vu-je-sais-qui-cest-mais-je-ne-dirais-rien.mp3",
+    "categories": [
+      "film",
+      "oss117"
+    ]
+  },
+  {
+    "label": "bblblblblblbl",
+    "src": "bblblblblblbl.mp3",
+    "categories": [
+      "webtv"
+    ]
+  },
+  {
+    "label": "bblblblblblbl 2",
+    "src": "bblblblblblbl-2.mp3",
+    "categories": [
+      "webtv"
+    ]
   } 
 ]
