@@ -328,8 +328,52 @@
     ]
   },
   {
-    "label": "Asseyez-vous plutot...",
+    "label": "asseyez-vous plutot...",
     "src": "Tabouret.mp3",
+    "categories": []
+  },
+  {
+    "label": "le caca des pigeons c'est caca",
+    "src": "le-caca-des-pigeons.mp3",
+    "categories": [
+      "kaamelott"
+    ]
+  },
+  {
+    "label": "à roulettes",
+    "src": "a_roulettes.mp3",
+    "categories": [
+      "kaamelott"
+    ]
+  },
+  {
+    "label": "ah nickel",
+    "src": "ah nickel.mp3",
+    "categories": []
+  },
+  {
+    "label": "tu vas repartir direct dans le cosmos encule",
+    "src": "cosmos encule.mp3",
+    "categories": []
+  },
+  {
+    "label": "desire-moi",
+    "src": "desire-moi.mp3",
+    "categories": []
+  },
+  {
+    "label": "vous vous foutez de notre gueule",
+    "src": "foutez gueule.mp3",
+    "categories": []
+  },
+  {
+    "label": "jvais le faire",
+    "src": "jvais le faire.mp3",
+    "categories": []
+  },
+  {
+    "label": "je dois ejaculer dans vos yeux",
+    "src": "ejaculer yeux.mp3",
     "categories": []
   },
   {
