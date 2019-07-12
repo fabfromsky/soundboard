@@ -63,7 +63,7 @@
     "label": "mais c'est de la merde",
     "src": "mais c'est de la merde.mp3",
     "categories": [
-
+      "TV"
     ]
   },
   {
@@ -264,6 +264,74 @@
     "src": "bblblblblblbl-2.mp3",
     "categories": [
       "webtv"
+    ]
+  },
+  {
+    "label": "je veux faire l'amour",
+    "src": "mais-moi-jveux-faire-lamour.mp3",
+    "categories": [
+      "TV"
+    ]
+  },
+  {
+    "label": "t'es un malade bernard",
+    "src": "tes-un-malade-bernard.mp3",
+    "categories": [
+      "TV"
+    ]
+  },
+  {
+    "label": "les boules de noel",
+    "src": "boules-de-noel-oss-117.mp3",
+    "categories": [
+      "oss117",
+      "film"
+    ]
+  },
+  {
+    "label": "laissez la police faire son travail",
+    "src": "laissez-la-police-faire-son-travail.mp3",
+    "categories": [
+      "la cité de la peur",
+      "film"
+    ]
+  },
+  {
+    "label": "laissez la police faire son travail [EN]",
+    "src": "laissez-la-police-faire-son-travail-en.mp3",
+    "categories": [
+      "la cité de la peur",
+      "film"
+    ]
+  },
+  {
+    "label": "laissez la police faire son travail [RU]",
+    "src": "laissez-la-police-faire-son-travail-ru.mp3",
+    "categories": [
+      "la cité de la peur",
+      "film"
+    ]
+  },
+  {
+    "label": "décapité, vidé, plumé",
+    "src": "oss-117-decapite-vide-plume.mp3",
+    "categories": [
+      "oss117",
+      "film"
+    ]
+  },
+  {
+    "label": "pas commencer à jouer avec mes couilles",
+    "src": "va-pas-falloir-jouer-avec-mes-couilles.mp3",
+    "categories": [
+      "film"
+    ]
+  },
+  {
+    "label": "j'ai faim",
+    "src": "jai-faim.mp3",
+    "categories": [
+      "film"
     ]
   } 
 ]

@@ -17,9 +17,9 @@
   <div class="grid">
     <bouton
       v-for="(sound, i) in filteredSounds"
-      :key="i"
-      :sound="sound"
-      :index="i"/>
+      :key="selectedCategory + i"
+      :index="selectedCategory + i"
+      :sound="sound" />
   </div>
 </div>
 </template>
@@ -102,7 +102,7 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: 20px;
     box-sizing: border-box;
 
     &:hover,
@@ -114,6 +114,7 @@ export default {
   }
 
   input {
+    margin-right: 20px;
     color: #0e1e24;
     font-weight: bold;
     text-transform: capitalize;
@@ -136,7 +137,7 @@ export default {
   }
 }
 .grid {
-  text-align: left;
+  text-align: center;
 }
 </style>
 
