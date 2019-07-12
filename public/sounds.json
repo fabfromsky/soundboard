@@ -328,6 +328,11 @@
     ]
   },
   {
+    "label": "Asseyez-vous plutot...",
+    "src": "Tabouret.mp3",
+    "categories": []
+  },
+  {
     "label": "j'ai faim",
     "src": "jai-faim.mp3",
     "categories": [
