@@ -16,9 +16,10 @@
   </div>
   <div class="grid">
     <bouton
-      v-for="(sound, i) in filteredSounds"
-      :key="selectedCategory + i"
-      :index="selectedCategory + i"
+      v-for="(sound, i) in allSounds"
+      v-show="filteredSounds.includes(sound)"
+      :key="i"
+      :index="i"
       :sound="sound" />
   </div>
 </div>
