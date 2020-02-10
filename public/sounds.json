@@ -448,8 +448,32 @@
     "label": "quelle indignité",
     "src": "sarkozy-quelle-indignite.mp3",
     "categories": [
-      "potlitique",
+      "politique",
       "sarkozy"
+    ]
+  },
+  {
+    "label": "il est content",
+    "src": "il-est-content.mp3",
+    "categories": [
+      "panacloc",
+      "humoriste"
+    ]
+  },
+  {
+    "label": "il a un ordinateur il est content",
+    "src": "il-a-un-ordi-il-est-content.mp3",
+    "categories": [
+      "panacloc",
+      "humoriste"
+    ]
+  },
+  {
+    "label": "il a fait sa blague de merde",
+    "src": "blague-de-merde.mp3",
+    "categories": [
+      "panacloc",
+      "humoriste"
     ]
   } 
 ]
