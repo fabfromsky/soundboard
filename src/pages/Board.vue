@@ -1,42 +1,40 @@
 <template>
-<div>
-  <div class="search-tools" v-on:change="filter">
-    <input type="text" v-model="search" placeholder="rechercher" />
-    <select v-model="selectedCategory">
-      <option value='null'>
-        tous
-      </option>
-      <option
-        v-for="(category, i) in categories"
-        :key="i"
-        :value="categories[i]">
-        {{ categories[i] }}
-      </option>
-    </select>
+  <div>
+    <div class="search-tools">
+      <input type="text" v-model="search" placeholder="rechercher"/>
+      <select v-model="selectedCategory">
+        <option value='null'>
+          tous
+        </option>
+        <option
+          v-for="(category, i) in categories"
+          :key="i"
+          :value="categories[i]">
+          {{ categories[i] }}
+        </option>
+      </select>
+    </div>
+    <div class="grid">
+      <bouton
+        v-for="(sound, j) in allSounds"
+        v-show="showSoundOnSelect(sound)"
+        :key="j"
+        :sound="sound"
+        :index="j"/>
+    </div>
   </div>
-  <div class="grid">
-    <bouton
-      v-for="(sound, i) in allSounds"
-      v-show="filteredSounds.includes(sound)"
-      :key="i"
-      :index="i"
-      :sound="sound" />
-  </div>
-</div>
 </template>
 
 <script>
-import Bouton from '../components/Bouton.vue'
 import lodash from 'lodash'
+import Bouton from '../components/Bouton.vue'
 
 export default {
   name: 'Board',
   components: { Bouton },
-  data() {
+  data () {
     return {
       allSounds: [],
-      filteredSounds: [],
-      isPlaying: false,
       categories: [],
       selectedCategory: null,
       search: null
@@ -44,9 +42,9 @@ export default {
   },
   mounted () {
     fetch('../sounds.json')
-      .then(function(res) {
-        res.json().then(function(data) {
-          this.filteredSounds = this.allSounds = lodash.orderBy(data, 'label')
+      .then(function (res) {
+        res.json().then(function (data) {
+          this.allSounds = lodash.orderBy(data, 'label')
           this.categories = this.getCategories(data)
         }.bind(this))
       }.bind(this))
@@ -59,28 +57,18 @@ export default {
       })
       return lodash.uniq(categories)
     },
-    filter (val) {
-      return lodash.filter(this.allSounds, (sound) => {
-        let filteredCategories = []
-        sound.categories.forEach((categorie) => {
-          if (categorie.includes(val)) {
-            filteredCategories.push(categorie)
-          }
-        })
-        return sound.label.includes(val) || sound.src.includes(val) || filteredCategories.length > 0
-      })
-
-    }
-  },
-  watch: {
-    selectedCategory(val) {
-      this.filteredSounds = val !== 'null' ? lodash.filter(this.allSounds, (sound) => lodash.includes(sound.categories, this.selectedCategory)) : this.allSounds
+    showSoundOnSelect (sound) {
+      if ((this.search !== null && this.search !== '')) {
+        return this.inputIntoSelectOrNot(sound)
+      } else if ((this.selectedCategory === 'null' || this.selectedCategory === null)) {
+        return true
+      } else return lodash.includes(sound.categories, this.selectedCategory)
     },
-    search(val) {
-      if(val !== null && val !== "") {
-        this.filteredSounds = this.filter(val)
+    inputIntoSelectOrNot (sound) {
+      if (this.selectedCategory !== 'null' && this.selectedCategory !== null) {
+        return (lodash.includes(sound.categories, this.selectedCategory) && (sound.label.includes(this.search.toLowerCase()) || sound.src.includes(this.search.toLowerCase())))
       } else {
-        this.filteredSounds = this.allSounds
+        return sound.label.includes(this.search.toLowerCase()) || sound.src.includes(this.search.toLowerCase())
       }
     }
   }
@@ -97,7 +85,6 @@ export default {
     text-transform: capitalize;
     height: 60px;
     width: 200px;
-    border: none;
     background: white;
     border: 2px solid white;
     padding-left: 20px;
@@ -121,7 +108,6 @@ export default {
     text-transform: capitalize;
     height: 60px;
     width: 200px;
-    border: none;
     background: white;
     border: 2px solid white;
     padding-left: 20px;
@@ -141,5 +127,3 @@ export default {
   text-align: center;
 }
 </style>
-
-
