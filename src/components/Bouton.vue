@@ -99,16 +99,16 @@ button {
   > div {
     width: 0;
     height: 0;
-    border-left: 10px solid#0e1e24;
+    border-left: 10px solid #0e1e24;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     display: block;
     transition: all 0.5s;
 
     &.is-playing {
-      border-bottom: 10px solid#0e1e24;
-      border-top: 10px solid#0e1e24;
-      border-right: 10px solid#0e1e24;
+      border-bottom: 10px solid #0e1e24;
+      border-top: 10px solid #0e1e24;
+      border-right: 10px solid #0e1e24;
       transition: all 0.5s;
     }
   }

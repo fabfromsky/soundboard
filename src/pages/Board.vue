@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import { get as _get, uniq as _uniq, concat as _concat, filter as _filter, includes as _includes } from 'lodash'
-import bouton from '../components/bouton'
-import { orderBy as _orderBy } from 'lodash'
+import Bouton from '../components/Bouton.vue'
+import lodash from 'lodash'
+
 export default {
   name: 'Board',
-  components: {bouton},
+  components: { Bouton },
   data() {
     return {
       allSounds: [],
@@ -46,7 +46,7 @@ export default {
     fetch('../sounds.json')
       .then(function(res) {
         res.json().then(function(data) {
-          this.filteredSounds = this.allSounds = _orderBy(data, 'label')
+          this.filteredSounds = this.allSounds = lodash.orderBy(data, 'label')
           this.categories = this.getCategories(data)
         }.bind(this))
       }.bind(this))
@@ -55,12 +55,12 @@ export default {
     getCategories (data) {
       let categories = []
       data.forEach((datum) => {
-        categories = _concat(categories, ...datum.categories)
+        categories = lodash.concat(categories, ...datum.categories)
       })
-      return _uniq(categories)
+      return lodash.uniq(categories)
     },
     filter (val) {
-      return _filter(this.allSounds, (sound) => {
+      return lodash.filter(this.allSounds, (sound) => {
         let filteredCategories = []
         sound.categories.forEach((categorie) => {
           if (categorie.includes(val)) {
@@ -74,7 +74,7 @@ export default {
   },
   watch: {
     selectedCategory(val) {
-      this.filteredSounds = val !== 'null' ? _filter(this.allSounds, (sound) => _includes(sound.categories, this.selectedCategory)) : this.allSounds
+      this.filteredSounds = val !== 'null' ? lodash.filter(this.allSounds, (sound) => lodash.includes(sound.categories, this.selectedCategory)) : this.allSounds
     },
     search(val) {
       if(val !== null && val !== "") {

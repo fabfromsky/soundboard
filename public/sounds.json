@@ -1,7 +1,7 @@
 [
   {
     "label": "wow",
-    "src":"wow.mp3",
+    "src": "wow.mp3",
     "categories": [
       "film",
       "onomatopée"
@@ -9,52 +9,52 @@
   },
   {
     "label": "ah",
-    "src":"ah.mp3",
+    "src": "ah.mp3",
     "categories": [
       "koh lantah",
       "onomatopée"
     ]
-  }, 
+  },
   {
     "label": "il est content gaetan",
-    "src":"il-est-content-gaetan.mp3",
+    "src": "il-est-content-gaetan.mp3",
     "categories": [
       "dessin animée"
     ]
-  }, 
+  },
   {
     "label": "tout le monde sen fout",
-    "src":"jurassic-park-tout-le-monde-sen-fout.mp3",
+    "src": "jurassic-park-tout-le-monde-sen-fout.mp3",
     "categories": [
       "film"
     ]
-  }, 
+  },
   {
     "label": "ah tes pede",
-    "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3",
+    "src": "la-tour-montparnasse-infernale-ah-tes-pede.mp3",
     "categories": [
       "tour montparnasse",
       "film"
     ]
-  }, 
+  },
   {
     "label": "comment y tas defonce",
-    "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
+    "src": "la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
     "categories": [
       "tour montparnasse",
       "film"
     ]
-  }, 
+  },
   {
     "label": "noot noot",
-    "src":"noot-noot.mp3",
+    "src": "noot-noot.mp3",
     "categories": [
       "dessin animée"
     ]
-  }, 
+  },
   {
     "label": "pas besoin de protection dans la vie",
-    "src":"omar-ef-fred-protection.mp3",
+    "src": "omar-ef-fred-protection.mp3",
     "categories": [
       "comique"
     ]
@@ -475,5 +475,5 @@
       "panacloc",
       "humoriste"
     ]
-  } 
+  }
 ]
