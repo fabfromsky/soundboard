@@ -475,5 +475,12 @@
       "panacloc",
       "humoriste"
     ]
+  },
+  {
+    "label": "Faut pas respirer la compote",
+    "src": "faut-pas-respirer-la-compote.mp3",
+    "categories": [
+      "kaamelott"
+    ]
   } 
 ]
