@@ -559,6 +559,15 @@
     ]
   },
   {
+    "id": 69,
+    "label": "s'agirait de grandir",
+    "src": "sagirait-de-grandir.mp3",
+    "categories": [
+      "oss",
+      "117"
+    ]
+  },
+  {
     "id": 70,
     "label": "c'est honteux",
     "src": "cest-honteux.mp3",
@@ -577,9 +586,27 @@
     ]
   },
   {
-    "id": 117,
+    "id": 72,
     "label": "faisons comme ça",
     "src": "daccord-faisons-comme-ca.mp3",
+    "categories": [
+      "oss",
+      "117"
+    ]
+  },
+  {
+    "id": 73,
+    "label": "ça me sert à rien",
+    "src": "daccord-faisons-comme-ca.mp3",
+    "categories": [
+      "oss",
+      "117"
+    ]
+  },
+  {
+    "id": 74,
+    "label": "comme tu voudras",
+    "src": "comme-tu-voudras.mp3",
     "categories": [
       "oss",
       "117"
