@@ -1,23 +1,18 @@
 <template>
   <div id="app">
-    <Board/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Board from './pages/Board.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Board
-  }
+  name: 'app'
 }
 </script>
 
 <style lang="scss">
 html {
-  background: #f2f5f7;
+  background: #e8e9ee;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "label": "wow",
     "src":"wow.mp3",
     "categories": [
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "id": 2,
     "label": "ah",
     "src":"ah.mp3",
     "categories": [
@@ -16,6 +18,7 @@
     ]
   }, 
   {
+    "id": 3,
     "label": "il est content gaetan",
     "src":"il-est-content-gaetan.mp3",
     "categories": [
@@ -23,6 +26,7 @@
     ]
   }, 
   {
+    "id": 4,
     "label": "tout le monde sen fout",
     "src":"jurassic-park-tout-le-monde-sen-fout.mp3",
     "categories": [
@@ -30,6 +34,7 @@
     ]
   }, 
   {
+    "id": 5,
     "label": "ah tes pede",
     "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3",
     "categories": [
@@ -38,6 +43,7 @@
     ]
   }, 
   {
+    "id": 6,
     "label": "comment y tas defonce",
     "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
     "categories": [
@@ -46,6 +52,7 @@
     ]
   }, 
   {
+    "id": 7,
     "label": "noot noot",
     "src":"noot-noot.mp3",
     "categories": [
@@ -53,6 +60,7 @@
     ]
   }, 
   {
+    "id": 8,
     "label": "pas besoin de protection dans la vie",
     "src":"omar-ef-fred-protection.mp3",
     "categories": [
@@ -60,6 +68,7 @@
     ]
   },
   {
+    "id": 9,
     "label": "mais c'est de la merde",
     "src": "mais c'est de la merde.mp3",
     "categories": [
@@ -67,6 +76,7 @@
     ]
   },
   {
+    "id": 10,
     "label": "bon travail",
     "src": "bon-travail.mp3",
     "categories": [
@@ -74,6 +84,7 @@
     ]
   },
   {
+    "id": 11,
     "label": "c'est nul",
     "src": "cest-nul.mp3",
     "categories": [
@@ -81,6 +92,7 @@
     ]
   },
   {
+    "id": 12,
     "label": "knacki",
     "src": "mais-tavais-dit-quon-ferait-des-knacki.mp3",
     "categories": [
@@ -88,6 +100,7 @@
     ]
   },
   {
+    "id": 13,
     "label": "pas de palais",
     "src": "pas-de-palais-pas-de-palais.mp3",
     "categories": [
@@ -95,6 +108,7 @@
     ]
   },
   {
+    "id": 14,
     "label": "maurice",
     "src": "tu-pousses-le-bouchon-un-peu-trop-loin-maurice.mp3",
     "categories": [
@@ -102,6 +116,7 @@
     ]
   },
   {
+    "id": 15,
     "label": "encore du travail",
     "src": "warcraft-3-humain-travail.mp3",
     "categories": [
@@ -109,6 +124,7 @@
     ]
   },
   {
+    "id": 16,
     "label": "travail terminé",
     "src": "travail-termine.mp3",
     "categories": [
@@ -116,6 +132,7 @@
     ]
   },
   {
+    "id": 17,
     "label": "cool cool cool",
     "src": "cool-cool-cool-cool-cool.mp3",
     "categories": [
@@ -124,6 +141,7 @@
     ]
   },
   {
+    "id": 18,
     "label": "cool cool cool 2",
     "src": "cool-cool-cool-cool-cool-2.mp3",
     "categories": [
@@ -132,6 +150,7 @@
     ]
   },
   {
+    "id": 19,
     "label": "cool cool cool 3",
     "src": "cool-cool-cool-cool-cool-3.mp3",
     "categories": [
@@ -140,6 +159,7 @@
     ]
   },
   {
+    "id": 20,
     "label": "cool cool cool 4",
     "src": "cool-cool-cool-cool-cool-4.mp3",
     "categories": [
@@ -148,6 +168,7 @@
     ]
   },
   {
+    "id": 21,
     "label": "cool cool cool 5",
     "src": "cool-cool-cool-cool-cool-5.mp3",
     "categories": [
@@ -156,6 +177,7 @@
     ]
   },
   {
+    "id": 22,
     "label": "j'aime me beurrer la biscotte",
     "src": "oss-117-jaime-me-beurrer-la-biscotte.mp3",
     "categories": [
@@ -164,6 +186,7 @@
     ]
   },
   {
+    "id": 23,
     "label": "ça sent le taureau ici",
     "src": "mais-qui-a-tue-pamela-rose-ca-sent-le-taureau-ici-a-rungis.mp3",
     "categories": [
@@ -171,6 +194,7 @@
     ]
   },
   {
+    "id": 24,
     "label": "c'est mieux comme ça ?",
     "src": "cest-mieux-comme-ca.mp3",
     "categories": [
@@ -178,6 +202,7 @@
     ]
   },
   {
+    "id": 25,
     "label": "ça fait des chocapics",
     "src": "et-paf-ca-fait-des-chocapic.mp3",
     "categories": [
@@ -185,6 +210,7 @@
     ]
   },
   {
+    "id": 26,
     "label": "oh oh oh ooh",
     "src": "motus-boule-noire.mp3",
     "categories": [
@@ -192,6 +218,7 @@
     ]
   },
   {
+    "id": 27,
     "label": "t'as pas envie...",
     "src": "rrrrrrr-tas-pas-envie-des-fois-de-pas-rien-faire.mp3",
     "categories": [
@@ -200,6 +227,7 @@
     ]
   },
   {
+    "id": 28,
     "label": "un sandwish",
     "src": "rrrrrrr-celui-qui-dit-quil-la-fait-je-lui-offre-un-sandwish.mp3",
     "categories": [
@@ -208,6 +236,7 @@
     ]
   },
   {
+    "id": 29,
     "label": "elle est morte de vieillesse",
     "src": "rrrrrrr-non-mais-je-sais.mp3",
     "categories": [
@@ -216,6 +245,7 @@
     ]
   },
   {
+    "id": 30,
     "label": "c'est peut être un végétal",
     "src": "rrrrrrr-si-cest-pas-un-animal-quil-la-tue-cest-ptet-un-vegetal.mp3",
     "categories": [
@@ -224,6 +254,7 @@
     ]
   },
   {
+    "id": 31,
     "label": "cochon",
     "src": "cochon.mp3",
     "categories": [
@@ -231,6 +262,7 @@
     ]
   },
   {
+    "id": 32,
     "label": "rafiki",
     "src": "rafiki.mp3",
     "categories": [
@@ -238,6 +270,7 @@
     ]
   },
   {
+    "id": 33,
     "label": "wesh alors",
     "src": "wesh alors.mp3",
     "categories": [
@@ -245,6 +278,7 @@
     ]
   },
   {
+    "id": 34,
     "label": "je sais qui c'est",
     "src": "oss-117-jai-vu-je-sais-qui-cest-mais-je-ne-dirais-rien.mp3",
     "categories": [
@@ -253,6 +287,7 @@
     ]
   },
   {
+    "id": 35,
     "label": "bblblblblblbl",
     "src": "bblblblblblbl.mp3",
     "categories": [
@@ -260,6 +295,7 @@
     ]
   },
   {
+    "id": 36,
     "label": "bblblblblblbl 2",
     "src": "bblblblblblbl-2.mp3",
     "categories": [
@@ -267,6 +303,7 @@
     ]
   },
   {
+    "id": 37,
     "label": "je veux faire l'amour",
     "src": "mais-moi-jveux-faire-lamour.mp3",
     "categories": [
@@ -274,6 +311,7 @@
     ]
   },
   {
+    "id": 38,
     "label": "t'es un malade bernard",
     "src": "tes-un-malade-bernard.mp3",
     "categories": [
@@ -281,6 +319,7 @@
     ]
   },
   {
+    "id": 39,
     "label": "les boules de noel",
     "src": "boules-de-noel-oss-117.mp3",
     "categories": [
@@ -289,6 +328,7 @@
     ]
   },
   {
+    "id": 40,
     "label": "laissez la police faire son travail",
     "src": "laissez-la-police-faire-son-travail.mp3",
     "categories": [
@@ -297,6 +337,7 @@
     ]
   },
   {
+    "id":41,
     "label": "laissez la police faire son travail [EN]",
     "src": "laissez-la-police-faire-son-travail-en.mp3",
     "categories": [
@@ -305,6 +346,7 @@
     ]
   },
   {
+    "id": 42,
     "label": "laissez la police faire son travail [RU]",
     "src": "laissez-la-police-faire-son-travail-ru.mp3",
     "categories": [
@@ -313,6 +355,7 @@
     ]
   },
   {
+    "id": 43,
     "label": "décapité, vidé, plumé",
     "src": "oss-117-decapite-vide-plume.mp3",
     "categories": [
@@ -321,6 +364,7 @@
     ]
   },
   {
+    "id": 44,
     "label": "pas commencer à jouer avec mes couilles",
     "src": "va-pas-falloir-jouer-avec-mes-couilles.mp3",
     "categories": [
@@ -328,11 +372,13 @@
     ]
   },
   {
+    "id": 45,
     "label": "asseyez-vous plutot...",
     "src": "Tabouret.mp3",
     "categories": []
   },
   {
+    "id": 46,
     "label": "le caca des pigeons c'est caca",
     "src": "le-caca-des-pigeons.mp3",
     "categories": [
@@ -340,6 +386,7 @@
     ]
   },
   {
+    "id": 47,
     "label": "à roulettes",
     "src": "a_roulettes.mp3",
     "categories": [
@@ -347,36 +394,43 @@
     ]
   },
   {
+    "id": 48,
     "label": "ah nickel",
     "src": "ah nickel.mp3",
     "categories": []
   },
   {
+    "id": 49,
     "label": "tu vas repartir direct dans le cosmos encule",
     "src": "cosmos encule.mp3",
     "categories": []
   },
   {
+    "id": 50,
     "label": "desire-moi",
     "src": "desire-moi.mp3",
     "categories": []
   },
   {
+    "id": 51,
     "label": "vous vous foutez de notre gueule",
     "src": "foutez gueule.mp3",
     "categories": []
   },
   {
+    "id": 52,
     "label": "jvais le faire",
     "src": "jvais le faire.mp3",
     "categories": []
   },
   {
+    "id": 53,
     "label": "je dois ejaculer dans vos yeux",
     "src": "ejaculer yeux.mp3",
     "categories": []
   },
   {
+    "id": 54,
     "label": "c'est de la piquette jack",
     "src": "piquette jack.mp3",
     "categories": [
@@ -384,6 +438,7 @@
     ]
   },
   {
+    "id": 55,
     "label": "t'es mauvais jack",
     "src": "t'es mauvais.mp3",
     "categories": [
@@ -391,6 +446,7 @@
     ]
   },
   {
+    "id": 56,
     "label": "coup de polish",
     "src": "polish.mp3",
     "categories": [
@@ -399,6 +455,7 @@
     ]
   },
   {
+    "id": 57,
     "label": "j'ai faim",
     "src": "jai-faim.mp3",
     "categories": [
@@ -406,6 +463,7 @@
     ]
   },
   {
+    "id": 58,
     "label": "arretez de gueuler comme un con",
     "src": "ah_mais_arretez_de_gueuler_comme_un_con.mp3",
     "categories": [
@@ -413,6 +471,7 @@
     ]
   },
   {
+    "id": 59,
     "label": "je mets mon doigt",
     "src": "je mets mon doigt.mp3",
     "categories": [
@@ -421,6 +480,7 @@
     ]
   },
   {
+    "id": 60,
     "label": "je lui suce le derrière",
     "src": "je lui suce le derrière.mp3",
     "categories": [
@@ -429,6 +489,7 @@
     ]
   },
   {
+    "id": 61,
     "label": "liberté de penser",
     "src": "liberté de penser.mp3",
     "categories": [
@@ -437,6 +498,7 @@
     ]
   },
   {
+    "id": 62,
     "label": "tu te calme martine",
     "src": "tu-te-calme-martine.mp3",
     "categories": [
@@ -445,6 +507,7 @@
     ]
   },
   {
+    "id": 63,
     "label": "quelle indignité",
     "src": "sarkozy-quelle-indignite.mp3",
     "categories": [
@@ -453,6 +516,7 @@
     ]
   },
   {
+    "id": 64,
     "label": "il est content",
     "src": "il-est-content.mp3",
     "categories": [
@@ -461,6 +525,7 @@
     ]
   },
   {
+    "id": 65,
     "label": "il a un ordinateur il est content",
     "src": "il-a-un-ordi-il-est-content.mp3",
     "categories": [
@@ -469,6 +534,7 @@
     ]
   },
   {
+    "id": 66,
     "label": "il a fait sa blague de merde",
     "src": "blague-de-merde.mp3",
     "categories": [
@@ -477,6 +543,7 @@
     ]
   },
   {
+    "id": 67,
     "label": "faut pas respirer la compote",
     "src": "faut-pas-respirer-la-compote.mp3",
     "categories": [
@@ -484,11 +551,38 @@
     ]
   },
   {
+    "id": 68,
     "label": "mais oui c'est clair",
     "src": "mais-oui-cest-clair-by-eddy-malou.mp3",
     "categories": [
-      "eddy",
-      "malou"
+      "eddy malou"
+    ]
+  },
+  {
+    "id": 70,
+    "label": "c'est honteux",
+    "src": "cest-honteux.mp3",
+    "categories": [
+      "honteux",
+      "tv"
+    ]
+  },
+  {
+    "id": 71,
+    "label": "mais c'était sur",
+    "src": "mais-cetait-sur-en-fait.mp3",
+    "categories": [
+      "honteux",
+      "tv"
+    ]
+  },
+  {
+    "id": 117,
+    "label": "faisons comme ça",
+    "src": "daccord-faisons-comme-ca.mp3",
+    "categories": [
+      "oss",
+      "117"
     ]
   } 
 ]
