@@ -16,7 +16,7 @@
       "koh lantah",
       "onomatopée"
     ]
-  }, 
+  },
   {
     "id": 3,
     "label": "il est content gaetan",
@@ -24,7 +24,7 @@
     "categories": [
       "dessin animée"
     ]
-  }, 
+  },
   {
     "id": 4,
     "label": "tout le monde sen fout",
@@ -32,7 +32,7 @@
     "categories": [
       "film"
     ]
-  }, 
+  },
   {
     "id": 5,
     "label": "ah tes pede",
@@ -41,7 +41,7 @@
       "tour montparnasse",
       "film"
     ]
-  }, 
+  },
   {
     "id": 6,
     "label": "comment y tas defonce",
@@ -50,7 +50,7 @@
       "tour montparnasse",
       "film"
     ]
-  }, 
+  },
   {
     "id": 7,
     "label": "noot noot",
@@ -58,7 +58,7 @@
     "categories": [
       "dessin animée"
     ]
-  }, 
+  },
   {
     "id": 8,
     "label": "pas besoin de protection dans la vie",
@@ -696,6 +696,102 @@
     "categories": [
       "kassos",
       "papi fougasse"
+    ]
+  },
+  {
+    "id": 85,
+    "label": "ouh la la c'est la décadence",
+    "src": "decadence.mp3",
+    "categories": [
+      "homophobie"
+    ]
+  },
+  {
+    "id": 86,
+    "label": "c'est contre nature",
+    "src": "contre-nature.mp3",
+    "categories": [
+      "homophobie"
+    ]
+  },
+  {
+    "id": 87,
+    "label": "un homme m'a appris à tricoter",
+    "src": "homme-tricot.mp3",
+    "categories": [
+      "homophobie"
+    ]
+  },
+  {
+    "id": 88,
+    "label": "la colère de dieu",
+    "src": "colere-dieu.mp3",
+    "categories": [
+      "homophobie"
+    ]
+  },
+  {
+    "id": 89,
+    "label": "bravo la caméra nils",
+    "src": "ah-bravo-nils.mp3",
+    "categories": [
+      "insulte"
+    ]
+  },
+  {
+    "id": 90,
+    "label": "génial",
+    "src": "genial.mp3",
+    "categories": [
+      "insulte"
+    ]
+  },
+  {
+    "id": 91,
+    "label": "sale petit con",
+    "src": "sale-petit-con.mp3",
+    "categories": [
+      "insulte"
+    ]
+  },
+  {
+    "id": 92,
+    "label": "aie coup dur",
+    "src": "coup-dur-pour-guillaume.mp3",
+    "categories": [
+      "coup dur"
+    ]
+  },
+  {
+    "id": 93,
+    "label": "Mais si je suis très net",
+    "src": "mais-si-je-suis-net.mp3",
+    "categories": [
+      "drogué"
+    ]
+  },
+  {
+    "id": 94,
+    "label": "mais j'ai rien pris",
+    "src": "rien-pris.mp3",
+    "categories": [
+      "drogué"
+    ]
+  },
+  {
+    "id": 95,
+    "label": "Popopo",
+    "src": "popopo.mp3",
+    "categories": [
+      "Antoine daniel"
+    ]
+  },
+  {
+    "id": 96,
+    "label": "Je prends des précautions",
+    "src": "precaution.mp3",
+    "categories": [
+      "drogué"
     ]
   }
 ]
