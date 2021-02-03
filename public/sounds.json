@@ -793,5 +793,45 @@
     "categories": [
       "drogué"
     ]
+  },
+  {
+    "id": 97,
+    "label": "Salut mon pote",
+    "src": "salut-mon-pote.mp3",
+    "categories": [
+      "Michel Drucker"
+    ]
+  },
+  {
+    "id": 98,
+    "label": "C'est pas faux",
+    "src": "cest-pas-faux.mp3",
+    "categories": [
+      "Kaamelott"
+    ]
+  },
+  {
+    "id": 99,
+    "label": "ça c'est ma bite",
+    "src": "ca-c-ma-bite.mp3",
+    "categories": [
+      "Les nuls"
+    ]
+  },
+  {
+    "id": 100,
+    "label": "Entre les poils et les couilles",
+    "src": "entre-poil-et-couilles.mp3",
+    "categories": [
+      "Les nuls"
+    ]
+  },
+  {
+    "id": 101,
+    "label": "Ma bite c'est du béton",
+    "src": "ma-bite-du-beton.mp3",
+    "categories": [
+      "Les nuls"
+    ]
   }
 ]
