@@ -881,5 +881,17 @@
     "label": "énorme",
     "src": "enorme-jamy.mp3",
     "categories": ["react"]
+  },
+  {
+    "id": 110,
+    "label": "suspense (révélation)",
+    "src": "suspense.mp3",
+    "categories": ["react"]
+  },
+  {
+    "id": 111,
+    "label": "put the coconut down",
+    "src": "put-the-coconut-down-now.mp3",
+    "categories": ["react"]
   }
 ]
