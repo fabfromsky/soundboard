@@ -764,7 +764,7 @@
   },
   {
     "id": 93,
-    "label": "Mais si je suis très net",
+    "label": "mais si je suis très net",
     "src": "mais-si-je-suis-net.mp3",
     "categories": [
       "drogué"
@@ -780,7 +780,7 @@
   },
   {
     "id": 95,
-    "label": "Popopo",
+    "label": "popopo",
     "src": "popopo.mp3",
     "categories": [
       "Antoine daniel"
@@ -796,7 +796,7 @@
   },
   {
     "id": 97,
-    "label": "Salut mon pote",
+    "label": "salut mon pote",
     "src": "salut-mon-pote.mp3",
     "categories": [
       "Michel Drucker"
@@ -804,7 +804,7 @@
   },
   {
     "id": 98,
-    "label": "C'est pas faux",
+    "label": "c'est pas faux",
     "src": "cest-pas-faux.mp3",
     "categories": [
       "Kaamelott"
@@ -820,7 +820,7 @@
   },
   {
     "id": 100,
-    "label": "Entre les poils et les couilles",
+    "label": "entre les poils et les couilles",
     "src": "entre-poil-et-couilles.mp3",
     "categories": [
       "Les nuls"
@@ -828,7 +828,7 @@
   },
   {
     "id": 101,
-    "label": "Ma bite c'est du béton",
+    "label": "ma bite c'est du béton",
     "src": "ma-bite-du-beton.mp3",
     "categories": [
       "Les nuls"
@@ -854,14 +854,20 @@
   },
   {
     "id": 105,
-    "label": "Non (mario)",
+    "label": "non (mario)",
     "src": "mario-non.mp3",
     "categories": ["react"]
   },
   {
     "id": 106,
-    "label": "Ah oui oui oui",
+    "label": "ah oui oui oui",
     "src": "julien-lepers-ah-oui.mp3",
+    "categories": ["react"]
+  },
+  {
+    "id": 107,
+    "label": "monster kill",
+    "src": "monster-kill.mp3",
     "categories": ["react"]
   }
 ]
