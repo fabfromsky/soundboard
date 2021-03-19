@@ -869,5 +869,17 @@
     "label": "monster kill",
     "src": "monster-kill.mp3",
     "categories": ["react"]
+  },
+  {
+    "id": 108,
+    "label": "ici on récolte tout le sel",
+    "src": "le-sel.mp3",
+    "categories": ["react"]
+  },
+  {
+    "id": 109,
+    "label": "énorme",
+    "src": "enorme-jamy.mp3",
+    "categories": ["react"]
   }
 ]
