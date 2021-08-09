@@ -923,5 +923,47 @@
     "label": "bruit enervant",
     "src": "bruit-enervant.mp3",
     "categories": ["moi-moche", "bruit"]
+  },
+  {
+    "id": 117,
+    "label": "on va manger des chips",
+    "src": "on-va-manger-des-chips.mp3",
+    "categories": ["class américaine", "détournement", "grand détournement"]
+  },
+  {
+    "id": 118,
+    "label": "dix fois plus de classe",
+    "src": "jai-connu-un-mec-de-droite-une-fois-il-avait-dix-fois-plus-de-classe.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "droite"]
+  },
+  {
+    "id": 119,
+    "label": "on l'a retrouvé assassiné",
+    "src": "on-la-retrouve-assassine.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "mort"]
+  },
+  {
+    "id": 120,
+    "label": "tu fais la tronche ou quoi ?",
+    "src": "tu-fais-la-tronche.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "tronche"]
+  },
+  {
+    "id": 121,
+    "label": "a la ferme ta gueule",
+    "src": "a-la-ferme-ta-gueule.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "ferme", "ta gueule"]
+  },
+  {
+    "id": 122,
+    "label": "je suis surpuissant",
+    "src": "surpuissant.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "surpuissant", "super fort"]
+  },
+  {
+    "id": 123,
+    "label": "propos intolérables",
+    "src": "pas-de-tolerance.mp3",
+    "categories": ["classe américaine", "détournement", "grand détournement", "intolérable", "raciste", "tolérance"]
   }
 ]
