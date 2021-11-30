@@ -977,5 +977,17 @@
     "label": "ta gueule",
     "src": "ta-gueule.mp3",
     "categories": ["reaction", "les kassos"]
+  },
+  {
+    "id": 126,
+    "label": "t'es different",
+    "src": "tes-diferent.mp3",
+    "categories": ["racisme"]
+  },
+  {
+    "id": 127,
+    "label": "clic clic",
+    "src": "clic-clic.mp3",
+    "categories": ["rap tout terrain"]
   }
 ]
