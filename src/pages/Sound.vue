@@ -10,6 +10,7 @@
 <script>
 import _orderBy from 'lodash/orderBy'
 import _find from 'lodash/find'
+
 export default {
   name: 'Sound',
   props: {
@@ -22,12 +23,6 @@ export default {
     return {
       allSounds: []
     }
-  },
-  metaInfo: {
-    meta: [
-      { itemprop: 'encodingFormat', content: 'audio/mpeg' },
-      { itemprop: 'description', content: 'listen this on https://laboiteabenco.netlify.app/' }
-    ]
   },
   mounted () {
     fetch('../sounds.json')

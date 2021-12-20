@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'bouton',
+  name: 'Bouton',
   props: {
     sound: {
       type: Object,

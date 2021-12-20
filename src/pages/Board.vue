@@ -1,5 +1,6 @@
 <template>
   <div>
+    TEST
     <div class="search-tools">
       <input type="text" v-model="search" placeholder="rechercher"/>
       <select v-model="selectedCategory">
