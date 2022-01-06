@@ -989,5 +989,11 @@
     "label": "clic clic",
     "src": "clic-clic.mp3",
     "categories": ["rap tout terrain"]
+  },
+  {
+    "id": 128,
+    "label": "oui",
+    "src": "didier-drogba-oui.mp3",
+    "categories": ["didier drogba"]
   }
 ]
