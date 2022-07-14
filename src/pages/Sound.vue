@@ -1,10 +1,10 @@
 <template>
-<div v-if="sound" >
-  <div> {{ sound.label }}</div>
-  <audio controls>
-    <source :src="`/sounds/${sound.src}`" />
-  </audio>
-</div>
+  <div v-if="sound">
+    <div> {{ sound.label }}</div>
+    <audio controls>
+      <source :src="`/sounds/${sound.src}`">
+    </audio>
+  </div>
 </template>
 
 <script>
@@ -16,28 +16,28 @@ export default {
   props: {
     soundId: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      allSounds: []
+      allSounds: [],
     }
-  },
-  mounted () {
-    fetch('../sounds.json')
-      .then(function (res) {
-        res.json().then(function (data) {
-          this.allSounds = _orderBy(data, 'label')
-        }.bind(this))
-      }.bind(this))
   },
   computed: {
-    sound () {
+    sound() {
       return _find(this.allSounds, (sound) => {
         return sound.id.toString() === this.soundId
       })
-    }
-  }
+    },
+  },
+  mounted() {
+    fetch('../sounds.json')
+      .then((res) => {
+        res.json().then((data) => {
+          this.allSounds = _orderBy(data, 'label')
+        })
+      })
+  },
 }
 </script>

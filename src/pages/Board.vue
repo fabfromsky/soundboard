@@ -1,26 +1,28 @@
 <template>
   <div>
     <div class="search-tools">
-      <input type="text" v-model="search" placeholder="rechercher"/>
+      <input v-model="search" type="text" placeholder="rechercher">
       <select v-model="selectedCategory">
-        <option value='null'>
+        <option value="null">
           tous
         </option>
         <option
           v-for="(category, i) in categories"
           :key="i"
-          :value="categories[i]">
+          :value="categories[i]"
+        >
           {{ categories[i] }}
         </option>
       </select>
     </div>
     <div class="grid">
-      <bouton
+      <Bouton
         v-for="(sound, j) in allSounds"
         v-show="showSoundOnSelect(sound)"
         :key="j"
         :sound="sound"
-        :index="j"/>
+        :index="j"
+      />
     </div>
   </div>
 </template>
@@ -35,46 +37,45 @@ import Bouton from '../components/Bouton.vue'
 export default {
   name: 'Board',
   components: { Bouton },
-  data () {
+  data() {
     return {
       allSounds: [],
       categories: [],
       selectedCategory: null,
-      search: null
+      search: null,
     }
   },
-  mounted () {
+  mounted() {
     fetch('../sounds.json')
-      .then(function (res) {
-        res.json().then(function (data) {
+      .then((res) => {
+        res.json().then((data) => {
           this.allSounds = _orderBy(data, 'label')
           this.categories = this.getCategories(data)
-        }.bind(this))
-      }.bind(this))
+        })
+      })
   },
   methods: {
-    getCategories (data) {
+    getCategories(data) {
       let categories = []
       data.forEach((datum) => {
         categories = _concat(categories, ...datum.categories)
       })
       return _uniq(categories)
     },
-    showSoundOnSelect (sound) {
-      if ((this.search !== null && this.search !== '')) {
+    showSoundOnSelect(sound) {
+      if ((this.search !== null && this.search !== ''))
         return this.inputIntoSelectOrNot(sound)
-      } else if ((this.selectedCategory === 'null' || this.selectedCategory === null)) {
+      else if ((this.selectedCategory === 'null' || this.selectedCategory === null))
         return true
-      } else return _includes(sound.categories, this.selectedCategory)
+      else return _includes(sound.categories, this.selectedCategory)
     },
-    inputIntoSelectOrNot (sound) {
-      if (this.selectedCategory !== 'null' && this.selectedCategory !== null) {
+    inputIntoSelectOrNot(sound) {
+      if (this.selectedCategory !== 'null' && this.selectedCategory !== null)
         return (_includes(sound.categories, this.selectedCategory) && (_includes(sound.label, this.search.toLowerCase()) || _includes(sound.src, this.search.toLowerCase())))
-      } else {
+      else
         return _includes(sound.label, this.search.toLowerCase()) || _includes(sound.src, this.search.toLowerCase())
-      }
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -1,26 +1,25 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Sound from './pages/Sound.vue'
 import Board from './pages/Board.vue'
 
-
-const routes =  [
+const routes = [
   {
     name: 'home',
     path: '/',
-    component: Board
+    component: Board,
   },
   {
     name: 'sound',
     path: '/sound/:soundId',
     component: Sound,
-    props: true
-  }
+    props: true,
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 export default router

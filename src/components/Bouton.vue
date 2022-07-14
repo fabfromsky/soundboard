@@ -5,16 +5,18 @@
     </button>
     <div
       class="stop"
-      @click="toggle(index)">
+      @click="toggle(index)"
+    >
       <div :class="{ 'is-playing': isPlaying }" />
     </div>
     <audio
-      controls
       :id="index"
+      controls
+      :class="{ 'is-playing': isPlaying }"
       @play="isPlaying = true"
       @pause="isPlaying = false"
-      :class="{'is-playing': isPlaying}">
-      <source :src="`/sounds/${sound.src}`" />
+    >
+      <source :src="`/sounds/${sound.src}`">
     </audio>
   </div>
 </template>
@@ -25,16 +27,16 @@ export default {
   props: {
     sound: {
       type: Object,
-      required: true
+      required: true,
     },
     index: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      isPlaying: false
+      isPlaying: false,
     }
   },
   methods: {
@@ -47,8 +49,8 @@ export default {
     },
     toggle(id) {
       this.isPlaying ? this.stop(id) : this.play(id)
-    }
-  }
+    },
+  },
 }
 </script>
 
