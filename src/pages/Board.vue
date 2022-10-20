@@ -32,7 +32,7 @@ import _uniq from 'lodash/uniq'
 import _orderBy from 'lodash/orderBy'
 import _concat from 'lodash/concat'
 import _includes from 'lodash/includes'
-import Bouton from '../components/Bouton.vue'
+import Bouton from '@/components/Bouton.vue'
 
 export default {
   name: 'Board',
