@@ -1,56 +1,45 @@
 <template>
   <div class="sound">
-    <button @click="toggle(index)">
-      {{ sound.label }}
+    <button @click="toggle(props.index)">
+      {{ props.sound.label }}
     </button>
     <div
       class="stop"
-      @click="toggle(index)"
+      @click="toggle(props.index)"
     >
       <div :class="{ 'is-playing': isPlaying }" />
     </div>
     <audio
-      :id="index"
+      :id="props.index"
       controls
       :class="{ 'is-playing': isPlaying }"
       @play="isPlaying = true"
       @pause="isPlaying = false"
     >
-      <source :src="`/sounds/${sound.src}`">
+      <source :src="`/sounds/${props.sound.src}`">
     </audio>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Bouton',
-  props: {
-    sound: {
-      type: Object,
-      required: true,
-    },
-    index: {
-      type: Number,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      isPlaying: false,
-    }
-  },
-  methods: {
-    play(id) {
-      document.getElementById(id).play()
-    },
-    stop(id) {
-      document.getElementById(id).pause()
-      document.getElementById(id).currentTime = 0
-    },
-    toggle(id) {
-      this.isPlaying ? this.stop(id) : this.play(id)
-    },
-  },
+<script setup lang="ts">
+const props = defineProps<{
+  sound: Object
+  index: Number
+}>()
+
+const isPlaying = $ref(false)
+
+function play(id) {
+  document.getElementById(id).play()
+}
+
+function stop(id) {
+  document.getElementById(id).pause()
+  document.getElementById(id).currentTime = 0
+}
+
+function toggle(id) {
+  isPlaying ? stop(id) : play(id)
 }
 </script>
 
@@ -101,16 +90,16 @@ button {
   > div {
     width: 0;
     height: 0;
-    border-left: 10px solid#0e1e24;
+    border-left: 10px solid #0e1e24;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     display: block;
     transition: all 0.5s;
 
     &.is-playing {
-      border-bottom: 10px solid#0e1e24;
-      border-top: 10px solid#0e1e24;
-      border-right: 10px solid#0e1e24;
+      border-bottom: 10px solid #0e1e24;
+      border-top: 10px solid #0e1e24;
+      border-right: 10px solid #0e1e24;
       transition: all 0.5s;
     }
   }
@@ -128,4 +117,3 @@ audio {
   }
 }
 </style>
-

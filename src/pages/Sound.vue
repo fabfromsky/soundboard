@@ -7,37 +7,29 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import _orderBy from 'lodash/orderBy'
 import _find from 'lodash/find'
+import { onMounted } from 'vue'
 
-export default {
-  name: 'Sound',
-  props: {
-    soundId: {
-      type: String,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      allSounds: [],
-    }
-  },
-  computed: {
-    sound() {
-      return _find(this.allSounds, (sound) => {
-        return sound.id.toString() === this.soundId
+const props = defineProps<{
+  soundId: String
+}>()
+
+let allSounds = $ref([])
+
+const sound = $computed(() => {
+  return _find(allSounds, (oneSound) => {
+    return oneSound.id.toString() === props.soundId
+  })
+})
+
+onMounted(() => {
+  fetch('../sounds.json')
+    .then((res) => {
+      res.json().then((data) => {
+        allSounds = _orderBy(data, 'label')
       })
-    },
-  },
-  mounted() {
-    fetch('../sounds.json')
-      .then((res) => {
-        res.json().then((data) => {
-          this.allSounds = _orderBy(data, 'label')
-        })
-      })
-  },
-}
+    })
+})
 </script>

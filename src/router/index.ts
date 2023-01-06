@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Sound from './pages/Sound.vue'
-import Board from './pages/Board.vue'
+import Sound from '../pages/Sound.vue'
+import Board from '../pages/Board.vue'
 
 const routes = [
   {
@@ -18,9 +18,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
 
 export default router
-

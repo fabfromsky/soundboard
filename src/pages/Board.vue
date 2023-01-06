@@ -1,82 +1,73 @@
 <template>
-  <div>
-    <div class="search-tools">
-      <input v-model="search" type="text" placeholder="rechercher">
-      <select v-model="selectedCategory">
-        <option value="null">
-          tous
-        </option>
-        <option
-          v-for="(category, i) in categories"
-          :key="i"
-          :value="categories[i]"
-        >
-          {{ categories[i] }}
-        </option>
-      </select>
-    </div>
-    <div class="grid">
-      <Bouton
-        v-for="(sound, j) in allSounds"
-        v-show="showSoundOnSelect(sound)"
-        :key="j"
-        :sound="sound"
-        :index="j"
-      />
-    </div>
+  <div class="search-tools">
+    <input v-model="search" type="text" placeholder="rechercher">
+    <select v-model="selectedCategory">
+      <option value="null">
+        tous
+      </option>
+      <option
+        v-for="(category, i) in categories"
+        :key="i"
+        :value="categories[i]"
+      >
+        {{ categories[i] }}
+      </option>
+    </select>
+  </div>
+  <div class="grid">
+    <Bouton
+      v-for="(sound, j) in allSounds"
+      v-show="showSoundOnSelect(sound)"
+      :key="j"
+      :sound="sound"
+      :index="j"
+    />
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import _uniq from 'lodash/uniq'
 import _orderBy from 'lodash/orderBy'
 import _concat from 'lodash/concat'
 import _includes from 'lodash/includes'
-import Bouton from '@/components/Bouton.vue'
+import { onMounted } from 'vue'
 
-export default {
-  name: 'Board',
-  components: { Bouton },
-  data() {
-    return {
-      allSounds: [],
-      categories: [],
-      selectedCategory: null,
-      search: null,
-    }
-  },
-  mounted() {
-    fetch('../sounds.json')
-      .then((res) => {
-        res.json().then((data) => {
-          this.allSounds = _orderBy(data, 'label')
-          this.categories = this.getCategories(data)
-        })
-      })
-  },
-  methods: {
-    getCategories(data) {
-      let categories = []
-      data.forEach((datum) => {
-        categories = _concat(categories, ...datum.categories)
-      })
-      return _uniq(categories)
-    },
-    showSoundOnSelect(sound) {
-      if ((this.search !== null && this.search !== ''))
-        return this.inputIntoSelectOrNot(sound)
-      else if ((this.selectedCategory === 'null' || this.selectedCategory === null))
-        return true
-      else return _includes(sound.categories, this.selectedCategory)
-    },
-    inputIntoSelectOrNot(sound) {
-      if (this.selectedCategory !== 'null' && this.selectedCategory !== null)
-        return (_includes(sound.categories, this.selectedCategory) && (_includes(sound.label, this.search.toLowerCase()) || _includes(sound.src, this.search.toLowerCase())))
-      else
-        return _includes(sound.label, this.search.toLowerCase()) || _includes(sound.src, this.search.toLowerCase())
-    },
-  },
+let allSounds = $ref([])
+let categories = $ref([])
+const selectedCategory = $ref(null)
+const search = $ref(null)
+function getCategories(data) {
+  let categories = []
+  data.forEach((datum) => {
+    categories = _concat(categories, ...datum.categories)
+  })
+  return _uniq(categories)
 }
+
+function showSoundOnSelect(sound) {
+  if ((search !== null && search !== ''))
+    return inputIntoSelectOrNot(sound)
+  else if ((selectedCategory === 'null' || selectedCategory === null))
+    return true
+  else return _includes(sound.categories, selectedCategory)
+}
+
+function inputIntoSelectOrNot(sound) {
+  if (selectedCategory !== 'null' && selectedCategory !== null)
+    return (_includes(sound.categories, selectedCategory) && (_includes(sound.label, search.toLowerCase()) || _includes(sound.src, search.toLowerCase())))
+  else
+    return _includes(sound.label, search.toLowerCase()) || _includes(sound.src, search.toLowerCase())
+}
+
+onMounted(() => {
+  fetch('../sounds.json')
+    .then((res) => {
+      res.json().then((data) => {
+        allSounds = _orderBy(data, 'label')
+        categories = getCategories(data)
+      })
+    })
+})
 </script>
 
 <style lang="scss" scoped>
@@ -127,6 +118,7 @@ export default {
     }
   }
 }
+
 .grid {
   text-align: center;
 }
