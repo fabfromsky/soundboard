@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Sound from '../pages/Sound.vue'
 import Board from '../pages/Board.vue'
 
 const routes = [
@@ -8,12 +7,6 @@ const routes = [
     name: 'home',
     path: '/',
     component: Board,
-  },
-  {
-    name: 'sound',
-    path: '/sound/:soundId',
-    component: Sound,
-    props: true,
   },
 ]
 
