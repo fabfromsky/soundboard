@@ -30,42 +30,52 @@ import _uniq from 'lodash/uniq'
 import _orderBy from 'lodash/orderBy'
 import _concat from 'lodash/concat'
 import _includes from 'lodash/includes'
+import type { Ref } from 'vue'
 import { onMounted } from 'vue'
+import type { MySound } from '~/types/MySound'
 
-let allSounds = $ref([])
-let categories = $ref([])
-const selectedCategory = $ref(null)
-const search = $ref(null)
-function getCategories(data) {
-  let categories = []
+const allSounds: Ref<MySound[]> = ref([])
+const categories: Ref<string[]> = ref([])
+const selectedCategory = ref(null)
+const search = ref(null)
+function getCategories(data: MySound[]): string[] {
+  let categories: string[] = []
   data.forEach((datum) => {
     categories = _concat(categories, ...datum.categories)
   })
   return _uniq(categories)
 }
 
-function showSoundOnSelect(sound) {
-  if ((search !== null && search !== ''))
+function showSoundOnSelect(sound: MySound) {
+  if ((search.value !== null && search.value !== ''))
     return inputIntoSelectOrNot(sound)
-  else if ((selectedCategory === 'null' || selectedCategory === null))
+  else if ((selectedCategory.value === 'null' || selectedCategory.value === null))
     return true
-  else return _includes(sound.categories, selectedCategory)
+  else return _includes(sound.categories, selectedCategory.value)
 }
 
-function inputIntoSelectOrNot(sound) {
-  if (selectedCategory !== 'null' && selectedCategory !== null)
-    return (_includes(sound.categories, selectedCategory) && (_includes(sound.label, search.toLowerCase()) || _includes(sound.src, search.toLowerCase())))
+function inputIntoSelectOrNot(sound: MySound) {
+  if (selectedCategory.value !== 'null' && selectedCategory.value !== null)
+    return (_includes(sound.categories, selectedCategory.value) && (_includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())))
   else
-    return _includes(sound.label, search.toLowerCase()) || _includes(sound.src, search.toLowerCase())
+    return _includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())
+}
+
+function api<T>(url: string): Promise<T> {
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok)
+        throw new Error(response.statusText)
+
+      return response.json() as Promise<T>
+    })
 }
 
 onMounted(() => {
-  fetch('../sounds.json')
+  api<MySound[]>('../sounds.json')
     .then((res) => {
-      res.json().then((data) => {
-        allSounds = _orderBy(data, 'label')
-        categories = getCategories(data)
-      })
+      allSounds.value = _orderBy<MySound>(res, 'label')
+      categories.value = getCategories(res)
     })
 })
 </script>

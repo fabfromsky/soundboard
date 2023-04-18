@@ -28,12 +28,14 @@
 </template>
 
 <script setup lang="ts">
+import type { MySound } from '~/types/MySound'
+
 const props = defineProps<{
-  sound: Object
-  index: Number
+  sound: MySound
+  index: number
 }>()
 
-const isPlaying = $ref(false)
+const isPlaying = ref(false)
 
 function play(id) {
   document.getElementById(id).play()
@@ -45,7 +47,7 @@ function stop(id) {
 }
 
 function toggle(id) {
-  isPlaying ? stop(id) : play(id)
+  isPlaying.value ? stop(id) : play(id)
 }
 
 async function copyURL(mytext) {

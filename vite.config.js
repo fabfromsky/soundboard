@@ -19,7 +19,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        'vue/macros',
+        // 'vue/macros',
       ],
       dts: 'src/auto-imports.d.ts',
       // dirs: [
@@ -45,7 +45,6 @@ export default defineConfig({
     }),
     Vue({
       include: [/\.vue$/],
-      reactivityTransform: true,
     }),
   ],
   resolve: {
