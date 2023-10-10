@@ -37,24 +37,24 @@ const props = defineProps<{
 
 const isPlaying = ref(false)
 
-function play(id) {
+function play(id: string) {
   document.getElementById(id).play()
 }
 
-function stop(id) {
+function stop(id: string) {
   document.getElementById(id).pause()
   document.getElementById(id).currentTime = 0
 }
 
-function toggle(id) {
+function toggle(id: string) {
   isPlaying.value ? stop(id) : play(id)
 }
 
-async function copyURL(mytext) {
+async function copyURL(mytext: string) {
   try {
     const url = `/sounds/${mytext}`
     const imageUrl = new URL(url, import.meta.url)
-    await navigator.clipboard.writeText(imageUrl).href
+    await navigator.clipboard.writeText(imageUrl.href)
   }
   catch (e) {
     console.log(e)
