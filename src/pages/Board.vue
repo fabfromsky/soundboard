@@ -2,7 +2,7 @@
   <div class="search-tools">
     <input v-model="search" type="search" placeholder="rechercher">
     <select v-model="selectedCategory">
-      <option value="null">
+      <option value="tous">
         tous
       </option>
       <option
@@ -36,8 +36,10 @@ import type { MySound } from '~/types/MySound'
 
 const allSounds: Ref<MySound[]> = ref([])
 const categories: Ref<string[]> = ref([])
-const selectedCategory = ref(null)
-const search = ref(null)
+
+const selectedCategory = ref('tous')
+const search = ref('')
+
 function getCategories(data: MySound[]): string[] {
   let categories: string[] = []
   data.forEach((datum) => {
@@ -47,15 +49,15 @@ function getCategories(data: MySound[]): string[] {
 }
 
 function showSoundOnSelect(sound: MySound) {
-  if ((search.value !== null && search.value !== ''))
+  if ((search.value !== ''))
     return inputIntoSelectOrNot(sound)
-  else if ((selectedCategory.value === 'null' || selectedCategory.value === null))
+  else if ((selectedCategory.value === 'tous'))
     return true
   else return _includes(sound.categories, selectedCategory.value)
 }
 
 function inputIntoSelectOrNot(sound: MySound) {
-  if (selectedCategory.value !== 'null' && selectedCategory.value !== null)
+  if (selectedCategory.value !== 'tous')
     return (_includes(sound.categories, selectedCategory.value) && (_includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())))
   else
     return _includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())
@@ -72,7 +74,7 @@ function api<T>(url: string): Promise<T> {
 }
 
 onMounted(() => {
-  api<MySound[]>('../sounds.json')
+  api<MySound[]>('/sounds.json')
     .then((res) => {
       allSounds.value = _orderBy<MySound>(res, 'label')
       categories.value = getCategories(res)
