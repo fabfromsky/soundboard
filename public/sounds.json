@@ -2,7 +2,7 @@
   {
     "id": 1,
     "label": "wow",
-    "src":"wow.mp3",
+    "src": "wow.mp3",
     "categories": [
       "film",
       "onomatopée"
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "label": "ah",
-    "src":"ah.mp3",
+    "src": "ah.mp3",
     "categories": [
       "koh lantah",
       "onomatopée"
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "label": "il est content gaetan",
-    "src":"il-est-content-gaetan.mp3",
+    "src": "il-est-content-gaetan.mp3",
     "categories": [
       "dessin animée"
     ]
@@ -28,7 +28,7 @@
   {
     "id": 4,
     "label": "tout le monde sen fout",
-    "src":"jurassic-park-tout-le-monde-sen-fout.mp3",
+    "src": "jurassic-park-tout-le-monde-sen-fout.mp3",
     "categories": [
       "film"
     ]
@@ -36,7 +36,7 @@
   {
     "id": 5,
     "label": "ah tes pede",
-    "src":"la-tour-montparnasse-infernale-ah-tes-pede.mp3",
+    "src": "la-tour-montparnasse-infernale-ah-tes-pede.mp3",
     "categories": [
       "tour montparnasse",
       "film"
@@ -45,7 +45,7 @@
   {
     "id": 6,
     "label": "comment y tas defonce",
-    "src":"la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
+    "src": "la-tour-montparnasse-infernale-comment-y-tas-defonce.mp3",
     "categories": [
       "tour montparnasse",
       "film"
@@ -54,7 +54,7 @@
   {
     "id": 7,
     "label": "noot noot",
-    "src":"noot-noot.mp3",
+    "src": "noot-noot.mp3",
     "categories": [
       "dessin animée"
     ]
@@ -62,7 +62,7 @@
   {
     "id": 8,
     "label": "pas besoin de protection dans la vie",
-    "src":"omar-ef-fred-protection.mp3",
+    "src": "omar-ef-fred-protection.mp3",
     "categories": [
       "comique"
     ]
@@ -337,7 +337,7 @@
     ]
   },
   {
-    "id":41,
+    "id": 41,
     "label": "laissez la police faire son travail [EN]",
     "src": "laissez-la-police-faire-son-travail-en.mp3",
     "categories": [
@@ -1000,6 +1000,6 @@
     "id": 129,
     "label": "j'ecoute",
     "src": "jecoute.mp3",
-    "categories": ["oss117",  "film"]
+    "categories": ["oss117", "film"]
   }
 ]
