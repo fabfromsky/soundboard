@@ -80,7 +80,7 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .search-tools {
   text-align: center;
 

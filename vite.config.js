@@ -5,7 +5,7 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
-import Inspector from 'vite-plugin-vue-inspector'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 // import VueMacros from 'unplugin-vue-macros/vite'
 
@@ -13,9 +13,7 @@ import Inspector from 'vite-plugin-vue-inspector'
 export default defineConfig({
   plugins: [
     Inspect(),
-    Inspector({
-      toggleButtonVisibility: 'never',
-    }),
+    VueDevTools(),
     AutoImport({
       imports: [
         'vue',

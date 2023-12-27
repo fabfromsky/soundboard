@@ -62,7 +62,7 @@ async function copyURL(mytext: string) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .sound {
   background-color: white;
   display: inline-block;
