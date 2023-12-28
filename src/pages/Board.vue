@@ -6,36 +6,33 @@
         tous
       </option>
       <option
-        v-for="(category, i) in categories"
-        :key="i"
-        :value="categories[i]"
+        v-for="category in categories"
+        :key="category"
+        :value="category"
       >
-        {{ categories[i] }}
+        {{ category }}
       </option>
     </select>
   </div>
   <div class="grid">
-    <Bouton
-      v-for="(sound, j) in allSounds"
-      v-show="showSoundOnSelect(sound)"
-      :key="j"
-      :sound="sound"
-      :index="j"
-    />
+    <template
+      v-for="(sound) in allSounds"
+      :key="sound.id"
+    >
+      <Bouton
+        v-show="showSoundOnSelect(sound)"
+        :sound="sound"
+      />
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
-import _uniq from 'lodash/uniq'
-import _orderBy from 'lodash/orderBy'
-import _concat from 'lodash/concat'
-import _includes from 'lodash/includes'
-import type { Ref } from 'vue'
 import { onMounted } from 'vue'
 import type { MySound } from '~/types/MySound'
 
-const allSounds: Ref<MySound[]> = ref([])
-const categories: Ref<string[]> = ref([])
+const allSounds = ref<MySound[]>([])
+const categories = ref<string[]>([])
 
 const selectedCategory = ref('tous')
 const search = ref('')
@@ -43,41 +40,62 @@ const search = ref('')
 function getCategories(data: MySound[]): string[] {
   let categories: string[] = []
   data.forEach((datum) => {
-    categories = _concat(categories, ...datum.categories)
+    categories = [...categories, ...datum.categories]
   })
-  return _uniq(categories)
+  return Array.from(new Set(categories))
 }
 
 function showSoundOnSelect(sound: MySound) {
-  if ((search.value !== ''))
+  if (search.value !== '')
     return inputIntoSelectOrNot(sound)
-  else if ((selectedCategory.value === 'tous'))
+  else if (selectedCategory.value === 'tous')
     return true
-  else return _includes(sound.categories, selectedCategory.value)
+  else
+    return sound.categories.includes(selectedCategory.value)
 }
 
 function inputIntoSelectOrNot(sound: MySound) {
+  const isSearchMatch = (field: string) => field.toLowerCase().includes(search.value.toLowerCase())
+  const isCategoryMatch = () => sound.categories.includes(selectedCategory.value)
+
   if (selectedCategory.value !== 'tous')
-    return (_includes(sound.categories, selectedCategory.value) && (_includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())))
+    return isCategoryMatch() && (isSearchMatch(sound.label) || isSearchMatch(sound.src))
   else
-    return _includes(sound.label, search.value.toLowerCase()) || _includes(sound.src, search.value.toLowerCase())
+    return isSearchMatch(sound.label) || isSearchMatch(sound.src)
 }
 
-function api<T>(url: string): Promise<T> {
-  return fetch(url)
-    .then((response) => {
-      if (!response.ok)
-        throw new Error(response.statusText)
+async function api<T>(url: string): Promise<T> {
+  const response = await fetch(url)
+  if (!response.ok)
+    throw new Error(`HTTP error! status: ${response.status}`)
 
-      return response.json() as Promise<T>
-    })
+  const data = await response.json()
+  return data as T
+}
+
+function sortArrayByField<T>(array: T[], fieldName: keyof T): T[] {
+  return array.slice().sort((a, b) => {
+    const fieldA = String(a[fieldName]).toLowerCase()
+    const fieldB = String(b[fieldName]).toLowerCase()
+
+    if (fieldA < fieldB)
+      return -1
+
+    if (fieldA > fieldB)
+      return 1
+
+    return 0
+  })
 }
 
 onMounted(() => {
   api<MySound[]>('/sounds.json')
     .then((res) => {
-      allSounds.value = _orderBy<MySound>(res, 'label')
+      allSounds.value = sortArrayByField(res, 'label')
       categories.value = getCategories(res)
+    })
+    .catch((error) => {
+      console.error('Error fetching sounds:', error)
     })
 })
 </script>
